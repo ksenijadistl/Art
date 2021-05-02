@@ -1,3 +1,19 @@
+<?php
+session_start();
+if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
+    session_write_close();
+} else {
+    // since the username is not set in session, the user is not-logged-in
+    // he is trying to access this page unauthorized
+    // so let's clear all session variables and redirect him to index
+    session_unset();
+    session_write_close();
+    $url = "./index.php";
+    header("Location: $url");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +28,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 	</head>
 <body>
-
+<div class="user-container" style="background-color: #000; height: 30px; padding: 0 30px">
+		<div class="page-header">
+		    <a href="login/logout.php" style="float: right; color: #fff; text-decoration: none;">Odjavi se</a>
+		</div>
+		<div class="page-content" style="float: left; color: #fff;">Zdravo <?php echo $username;?></div>
+	</div>
 <!--Slider-->
 <div id="slider">
 	<div id="headerSlider" class="carousel slide" data-ride="carousel">
@@ -24,37 +45,36 @@
 		  <li data-target="#headerSlider" data-slide-to="4"></li>
 		</ol>
 		<div class="carousel-inner">
-		  <div class="carousel-item active "style="background-image: url('img/first.jpg'); background-size: cover;height: 500px;">
-			<!--<img src="img/first.jpg" class="d-block img-fluid" alt="first"  height="500px" width="100%">-->
-			<div class="carousel-caption">
-			<a href="index.php"> <img src="img/mdlogo1.png"  alt="drawLogo" style="margin-top: 220px; "></a>
-			</div>
+		  <div class="carousel-item active ">
+			<img src="img/first.jpg" class="d-block img-fluid" alt="first"  height="500px" width="100%">
+			<div class="carousel-caption " >
+				<img src="img/mdlogo1.png"  alt="logo" >
+				</div>
 		  </div>
 		  <div class="carousel-item">
-			<img src="img/art.jpg" class="d-block img-fluid" alt="art" height="500px" width="50%">
+			<img src="img/Slika (5).jpg" class="d-block img-fluid" alt="art" height="500px" width="50%">
 		    <div class="carousel-caption">
-				<a href="buy/art.php"> 
-				<img src="img/arr.png"  alt="drawLogo" width="500px" height="300px" style="float: right; margin-top: 300px; margin-right: 24px; "></a>
+				<a href="buy/art.php"> <img src="img/arrow.png"  alt="artLogo" style="float: right; margin-right: 23.3%;"></a>
 			</div>
 	      </div>
 		  <div class="carousel-item">
-			<img src="img/pencil.jpg" class="d-block img-fluid" alt="draw"  height="500px" width="50%">
+			<img src="img/crtez.jpg" class="d-block img-fluid" alt="draw"  height="500px" width="50%">
 			<div class="carousel-caption">
-				<a href="buy/draw.php"><img src="img/arr.png"  alt="drawLogo" width="500px" height="300px" style="float: right; margin-top: 300px; margin-right: 24px; "></a>
+				<a href="buy/draw.php"><img src="img/arrow.png"  alt="drawLogo" style="float: right; margin-right: 23.3%;"></a>
 				
 			</div>
 		  </div>
 		  <div class="carousel-item">
-			<img src="img/sculpture.jpg" class="d-block img-fluid" alt="sculpture" height="500px" width="50%">
+			<img src="img/sculpture (1).jpg" class="d-block img-fluid" alt="sculpture" height="500px" width="50%">
 			<div class="carousel-caption">
-				<a href="buy/sculpture.php"><img src="img/arr.png"  alt="drawLogo" width="500px" height="300px" style="float: right; margin-top: 300px; margin-right: 24px; "></a>
+				<a href="buy/sculpture.php"><img src="img/arrow.png"  alt="sculptureLogo" style="float: right; margin-right: 23.3%;" ></a>
 				
 			</div>
 		  </div>
 		  <div class="carousel-item">
-			<img src="img/create.jpg" class="d-block img-fluid" alt="create"  height="500px" width="50%">
+			<img src="img/youcreate.jpg" class="d-block img-fluid" alt="create"  height="500px" width="50%">
 			<div class="carousel-caption">
-				<a href="order/create.php"><img src="img/arr.png"  alt="drawLogo" width="500px" height="300px" style="float: right; margin-top: 300px; margin-right: 24px; "></a>
+				<a href="order/create.php"><img src="img/arrow.png"  alt="createLogo" style="float: right; margin-right: 23.3%;"></a>
 				
 			</div>
 		  </div>

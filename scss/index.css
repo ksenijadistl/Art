@@ -1,93 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    
+  margin: 0;
+  padding: 0;
 }
-/*----Slider----*/
 
 #slider {
-    width: 100%;
+  width: 100%;
 }
 
 .carousel-caption {
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: initial!important;
-
-}
-.carousel-item {
-    height: 500px;
-    width: 100%;
-
+  top: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  bottom: initial;
 }
 
 .carousel-caption h5 {
-    color: #000;
-    font-size: 42px;
-
+  color: #000;
+  font-size: 42px;
 }
-/*----About----*/
+
+.carousel-item {
+  height: 500px;
+  width: 100%;
+}
+
 #about {
-    height: 500px;
-    color: #555;
-   
-
+  height: 500px;
+  color: #555;
 }
 
-.col-md-6 img{
-    float: left;
-   
-}
-.col-md-6 h2{
-    padding-top: 70px;
-    margin-left: 40%;
-     float: left;
-
-
-
+.col-md-6 img {
+  float: left;
 }
 
-.col-md-6 p{
-    padding-top: 10px;
-    float: left;
- 
-   
-
+.col-md-6 h2 {
+  padding-top: 70px;
+  margin-left: 40%;
+  float: left;
 }
 
+.col-md-6 p {
+  padding-top: 10px;
+  float: left;
+}
 
-/*----Techniques----*/
 #techniques {
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/first.jpg);
-    background-size: cover;
-    background-position: center;
-    color: #efefef !important;
-    background-attachment: fixed;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(../img/first.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/first.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #efefef;
+  background-attachment: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
 #techniques h1 {
-    text-align: center;
-    color: #efefef !important;
-    padding-bottom: 10px;
-
+  text-align: center;
+  color: #efefef;
+  padding-bottom: 10px;
 }
+
 #techniques h1::after {
-    content: '';
-    background: #efefef;
-    display: block;
-    height: 3px;
-    width: 170px;
-    margin: 20px auto 5px;
+  content: '';
+  background: #efefef;
+  display: block;
+  height: 3px;
+  width: 170px;
+  margin: 20px auto 5px;
+}
 
+#footer {
+  background: #333;
+  color: #fff;
+  padding: 12px;
 }
-/*----Footer----*/
-#footer{
-    background: #333;
-    color: #fff;
-    padding: 12px;
-}
-@media only screen and(max-width: 768px){
-
-}
+/*# sourceMappingURL=index.css.map */

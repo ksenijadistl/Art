@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+#nav-bar ul li a:hover {
+  color: #970909;
+}
+
+.navbar-nav li {
+  padding: 0 10px;
+}
+
+.navbar-nav li a {
+  float: left;
+  text-align: left;
+}
+
+.navbar {
+  background-color: #2988c7;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.htitle {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.card {
+  width: 18rem;
+  float: left;
+  margin-left: 9%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.card img {
+  height: 350px;
+}
+
+footer {
+  float: left;
+  width: 100%;
+}
+
+#soc img {
+  border-radius: 25px;
+}
+/*# sourceMappingURL=arts.css.map */
